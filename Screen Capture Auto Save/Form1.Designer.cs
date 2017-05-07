@@ -135,7 +135,7 @@
             // checkMulti
             // 
             this.checkMulti.AutoSize = true;
-            this.checkMulti.Location = new System.Drawing.Point(306, 184);
+            this.checkMulti.Location = new System.Drawing.Point(306, 180);
             this.checkMulti.Name = "checkMulti";
             this.checkMulti.Size = new System.Drawing.Size(195, 22);
             this.checkMulti.TabIndex = 9;
