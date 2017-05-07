@@ -32,7 +32,6 @@ namespace Screen_Capture_Auto_Save
 
             korean = Properties.Settings.Default.boolKorean;
             checkMulti.Checked = multiScreen;
-            lblPath.Text = "저장 경로 : " + filePath;
 
             if (!korean)
             {
@@ -47,6 +46,7 @@ namespace Screen_Capture_Auto_Save
                 label1.Text = "Developer's blog :\r\nE-mail address:\r\nGitHub address :";
                 radioButton1.Text = "PrintScreen to capture";
                 radioButton2.Text = "Shift + PrintScreen to capture";
+                lblPath.Text = "Save location : " + filePath;
                 if (radioButton2.Checked)
                 {
                     if (korean)
@@ -84,6 +84,7 @@ namespace Screen_Capture_Auto_Save
                 label1.Text = "개발자 블로그 :\r\n이메일 주소 :\r\nGitHub 주소 :";
                 radioButton1.Text = "PrintScreen 으로 캡쳐";
                 radioButton2.Text = "Shift + PrintScreen 으로 캡쳐";
+                lblPath.Text = "저장 경로 : " + filePath;
                 if (radioButton2.Checked)
                 {
                     if (korean)
