@@ -34,30 +34,6 @@ namespace Screen_Capture_Auto_Save
             checkMulti.Checked = multiScreen;
             lblPath.Text = "저장 경로 : " + filePath;
 
-            if (shift)
-            {
-                if (korean)
-                {
-                    lblInform.Text = "Shift + PrintScreen 버튼을 누르면 화면이 저장됩니다.";
-                }
-                else
-                {
-                    lblInform.Text = "Press 'Shift + PrintScreen' buttons to Capture and Save";
-                }
-            }
-            else
-            {
-                if (korean)
-                {
-                    lblInform.Text = "PrintScreen 버튼을 누르면 화면이 저장됩니다.";
-                }
-                else
-                {
-                    lblInform.Text = "Press PrintScreen buttons to Capture and Save";
-                }
-            }
-
-            //언어 설정 불러오기
             if (!korean)
             {
                 btnManual.Text = "Manual";
@@ -69,7 +45,9 @@ namespace Screen_Capture_Auto_Save
                 lblVer.Text = "Version 0.6";
                 lblPath.Text = "Save location : " + filePath;
                 label1.Text = "Developer's blog :\r\nE-mail address:\r\nGitHub address :";
-                if (shift)
+                radioButton1.Text = "PrintScreen to capture";
+                radioButton2.Text = "Shift + PrintScreen to capture";
+                if (radioButton2.Checked)
                 {
                     if (korean)
                     {
@@ -91,6 +69,44 @@ namespace Screen_Capture_Auto_Save
                         lblInform.Text = "Press PrintScreen buttons to Capture and Save";
                     }
                 }
+                label1.Left = 614;
+            }
+            else
+            {
+                btnManual.Text = "설명서";
+                btnOpenPath.Text = "저장 폴더 열기";
+                btnPath.Text = "저장 경로 설정";
+                btnTray.Text = "트레이 아이콘에 표시";
+                checkMulti.Text = "여러 모니터 모두 캡쳐";
+                lblInform.Text = "왼쪽 Shift + PrintScreen 버튼을 누르면 화면이 저장 됩니다.";
+                lblVer.Text = "버전 0.6";
+                lblPath.Text = "저장 경로 : " + filePath;
+                label1.Text = "개발자 블로그 :\r\n이메일 주소 :\r\nGitHub 주소 :";
+                radioButton1.Text = "PrintScreen 으로 캡쳐";
+                radioButton2.Text = "Shift + PrintScreen 으로 캡쳐";
+                if (radioButton2.Checked)
+                {
+                    if (korean)
+                    {
+                        lblInform.Text = "Shift + PrintScreen 버튼을 누르면 화면이 저장됩니다.";
+                    }
+                    else
+                    {
+                        lblInform.Text = "Press 'Shift + PrintScreen' buttons to Capture and Save";
+                    }
+                }
+                else
+                {
+                    if (korean)
+                    {
+                        lblInform.Text = "PrintScreen 버튼을 누르면 화면이 저장됩니다.";
+                    }
+                    else
+                    {
+                        lblInform.Text = "Press PrintScreen buttons to Capture and Save";
+                    }
+                }
+                label1.Left = 638;
             }
         }
 
@@ -131,15 +147,14 @@ namespace Screen_Capture_Auto_Save
                 }
                 else
                 {
-                    Screen[] screens;
-                    screens = Screen.AllScreens;
+                    Screen[] screens = Screen.AllScreens;
                     int screensConunt = screens.Length;
 
                     for (int scrNum = 0; scrNum < screensConunt; scrNum++)
                     {
                         Bitmap bitmap = new Bitmap(screens[scrNum].Bounds.Width, screens[scrNum].Bounds.Height);
                         Graphics graphics = Graphics.FromImage(bitmap);
-                        graphics.CopyFromScreen(0, 0, 0, 0, bitmap.Size);
+                        graphics.CopyFromScreen(screens[scrNum].Bounds.X, screens[scrNum].Bounds.Y, 0, 0, bitmap.Size, CopyPixelOperation.SourceCopy);
                         string fileName = path1 + "\\" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss")+ "_monitorNo" + scrNum;
                         string finalName = fileName;
                         if (System.IO.File.Exists(fileName + ".png"))
@@ -212,7 +227,7 @@ namespace Screen_Capture_Auto_Save
                     "'Show on tray icon' button will hide this window and show Tray Icon\r\n\r\n" +
                     "click the tray icon to show hided window.\r\n\r\n" +
                     "This program olny works while not closed.\r\n\r\n" +
-                    "If you see trouble on this program, please send an e-mail to me");
+                    "If you see troubles on this program, please send an e-mail to me");
             }
         }
         //트레이 버튼: 트레이 아이콘 더블클릭 시
