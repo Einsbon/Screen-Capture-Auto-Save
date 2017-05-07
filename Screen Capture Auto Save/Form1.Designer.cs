@@ -103,9 +103,9 @@
             this.lblVer.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblVer.Location = new System.Drawing.Point(638, 185);
             this.lblVer.Name = "lblVer";
-            this.lblVer.Size = new System.Drawing.Size(72, 18);
+            this.lblVer.Size = new System.Drawing.Size(80, 18);
             this.lblVer.TabIndex = 6;
-            this.lblVer.Text = "버전 0.6";
+            this.lblVer.Text = "버전 0.6b";
             // 
             // notifyIcon1
             // 
