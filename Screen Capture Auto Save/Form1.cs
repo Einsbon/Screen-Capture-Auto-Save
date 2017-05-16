@@ -41,7 +41,6 @@ namespace Screen_Capture_Auto_Save
                 btnTray.Text = "Show on tray icon";
                 checkMulti.Text = "Capture Multi Screen";
                 lblInform.Text = "Press 'left Shift + PrintScreen' buttons to Capture and Save";
-                lblVer.Text = "Version 0.6b";
                 lblPath.Text = "Save location : " + filePath;
                 label1.Text = "Developer's blog :\r\nE-mail address:\r\nGitHub address :";
                 radioButton1.Text = "PrintScreen to capture";
@@ -69,7 +68,7 @@ namespace Screen_Capture_Auto_Save
                         lblInform.Text = "Press PrintScreen buttons to Capture and Save";
                     }
                 }
-                label1.Left = 614;
+                label1.Left = 720;
             }
             else
             {
@@ -79,7 +78,6 @@ namespace Screen_Capture_Auto_Save
                 btnTray.Text = "트레이 아이콘에 표시";
                 checkMulti.Text = "여러 모니터 모두 캡쳐";
                 lblInform.Text = "왼쪽 Shift + PrintScreen 버튼을 누르면 화면이 저장 됩니다.";
-                lblVer.Text = "버전 0.6b";
                 lblPath.Text = "저장 경로 : " + filePath;
                 label1.Text = "개발자 블로그 :\r\n이메일 주소 :\r\nGitHub 주소 :";
                 radioButton1.Text = "PrintScreen 으로 캡쳐";
@@ -107,7 +105,7 @@ namespace Screen_Capture_Auto_Save
                         lblInform.Text = "Press PrintScreen buttons to Capture and Save";
                     }
                 }
-                label1.Left = 638;
+                label1.Left = 780;
             }
         }
 
@@ -256,7 +254,6 @@ namespace Screen_Capture_Auto_Save
                 btnTray.Text = "Show on tray icon";
                 checkMulti.Text = "Capture Multi Screen";
                 lblInform.Text = "Press 'left Shift + PrintScreen' buttons to Capture and Save";
-                lblVer.Text = "Version 0.6b";
                 lblPath.Text = "Save location : " + filePath;
                 label1.Text = "Developer's blog :\r\nE-mail address:\r\nGitHub address :";
                 radioButton1.Text = "PrintScreen to capture";
@@ -283,7 +280,7 @@ namespace Screen_Capture_Auto_Save
                         lblInform.Text = "Press PrintScreen buttons to Capture and Save";
                     }
                 }
-                label1.Left = 614;
+                label1.Left = 720;
             }
             else
             {
@@ -293,7 +290,6 @@ namespace Screen_Capture_Auto_Save
                 btnTray.Text = "트레이 아이콘에 표시";
                 checkMulti.Text = "여러 모니터 모두 캡쳐";
                 lblInform.Text = "왼쪽 Shift + PrintScreen 버튼을 누르면 화면이 저장 됩니다.";
-                lblVer.Text = "버전 0.6b";
                 lblPath.Text = "저장 경로 : " + filePath;
                 label1.Text = "개발자 블로그 :\r\n이메일 주소 :\r\nGitHub 주소 :";
                 radioButton1.Text = "PrintScreen 으로 캡쳐";
@@ -320,7 +316,7 @@ namespace Screen_Capture_Auto_Save
                         lblInform.Text = "Press PrintScreen buttons to Capture and Save";
                     }
                 }
-                label1.Left = 638;
+                label1.Left = 780;
             }
         }
 
